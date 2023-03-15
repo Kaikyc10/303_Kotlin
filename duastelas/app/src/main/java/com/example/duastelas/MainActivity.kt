@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         btnGoTotela2 = findViewById(R.id.btngoToTela1)
         btnGoTotela2.setOnClickListener{
+
             val intent = Intent(this, tela2::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+            intent.putExtra("Chave", "Ola Tela 2")
             startActivity(intent)
         }
 

@@ -3,4 +3,5 @@
     <string name="alo">Hello World!</string>
     <string name="strbtngoToTela1">Go To Tela 1</string>
     <string name="strBtnVoltar">Back</string>
+    <string name="btnGoTo3">Next</string>
 </resources>
