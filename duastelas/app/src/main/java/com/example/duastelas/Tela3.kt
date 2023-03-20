@@ -15,9 +15,12 @@ class Tela3 : AppCompatActivity() {
             this.finish()
         }
 
-        var btnVini = findViewById(R.id.btnBack1) as Button
-        btnVini.setOnClickListener{
-            this.finish()
+
+        val btnVoltaTela1 = findViewById(R.id.btnBack1) as Button
+        btnVoltaTela1.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
         }
 
 
