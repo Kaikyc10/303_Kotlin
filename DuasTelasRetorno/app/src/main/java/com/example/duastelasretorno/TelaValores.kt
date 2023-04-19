@@ -15,9 +15,18 @@ class TelaValores : AppCompatActivity() {
         btnRetorno.setOnClickListener {
             val txt = findViewById(R.id.txt1) as TextView
             var msg = txt.text
-            val intent = Intent()
+
+            //opcao 1
+           /* val intent = Intent()
             intent.putExtra("ActivityResult", msg)
             setResult(RESULT_OK, intent)
+            finish()*/
+
+            Intent().apply {
+                putExtra("param1", 10)
+                putExtra("param2", "msg")
+                setResult(RESULT_OK, this)
+            }
             finish()
         }
     }
