@@ -39,17 +39,18 @@ class MainActivity : AppCompatActivity() {
                     var msg: String = " id :"
                     msg = msg + EstruturaList[2].id!! + " ra"
                     msg = msg + EstruturaList[2].ra!! + "\n"
-                    msg = msg + "data: " + EstruturaList[2].id!! + "\n"
-                    msg = msg + EstruturaList[2].lati!! + "\n"
-                    msg = msg + EstruturaList[2].longi!! + "\n"
+                    msg = msg + "data: " + EstruturaList[2].data!! + "\n"
+                    msg = msg + "latitude: "+EstruturaList[2].lat!! + "\n"
+                    msg = msg + "longitude" + EstruturaList[2].log!! + "\n"
                     binding.resultado.text = msg
+
                     Log.d("Img", EstruturaList[0].img!!)
                     val imageBytes = Base64.decode(EstruturaList[0].img!!, Base64.DEFAULT)
                     var bitmap: Bitmap? = null
                     bitmap = BitmapFactory.decodeByteArray(
                         imageBytes,
-                    0,
-                    imageBytes.size)
+                        0,
+                        imageBytes.size)
                     binding.imgV.setImageBitmap(bitmap)
 
                 }
